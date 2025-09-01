@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form — Modern</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page">
+    <div class="card">
+      <header class="card__head">
+        <h1>Contact Us</h1>
+        <p>We usually reply within a day.</p>
+      </header>
+
+      <form id="contact-form" class="form" novalidate>
+        <!-- Full Name -->
+        <div class="field" data-field>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Ahmed Ali" required minlength="2" />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="field" data-field>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <!-- Subject -->
+        <div class="field" data-field>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="What’s this about?" required minlength="3" />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <!-- Message -->
+        <div class="field" data-field>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message…" required minlength="10"></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <button class="btn" type="submit" id="submit-btn" aria-live="polite">Send Message</button>
+
+        <!-- Success toast -->
+        <p class="success" id="success" role="status" hidden>
+           Thanks! Your message has been sent.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
